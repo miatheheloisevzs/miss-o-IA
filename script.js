@@ -54,7 +54,19 @@ const perguntas = [
             {
                 texto: "Reduzir o uso da IA até que os problemas sejam resolvidos.",
                 afirmacao: "afirmacao"
+            }Resultado = document.querySelector(".texto-resultado");
+
+const perguntas = [
+    {
+        enunciado: "Gabriel conseguiu seu primeiro emprego em uma agência de publicidade. Depois de algumas semanas, a empresa anunciou uma novidade: uma IA capaz de criar textos, imagens e analisar dados em poucos segundos. O chefe disse que a ferramenta mudaria a rotina de toda a equipe. No primeiro dia, seu chefe apresenta uma nova ferramenta de IA que consegue escrever textos, analisar dados, criar imagens e automatizar tarefas que antes eram feitas pelos funcionários. Gabriel fica impressionado.",
+        alternativas: [
+            {
+                texto: "Quero aprender a usar antes que todo mundo.",
+                afirmacao: "afirmacao"
             }
+        ]
+    }
+];
         ]
     }
 ]; 
@@ -77,17 +89,16 @@ function mostraAlternativas() {
     for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativa = document.createElement("button");
         botaoAlternativa.textContent = alternativa.texto;
-        botaoAlternativa.addEventListener("click", function() {
+        botaoAlternativa.addEventListener("click", function() 
             atual++;
             mostraPergunta();
-        });
-        caixaAlternativas.appendChild(botaoAlternativa);
     }
-}
 
-function exibeResultado() {
-    caixaPerguntas.textContent = "Fim do questionário!";
-    caixaAlternativas.textContent = "";
+        }function respostaSelecionada(opcaoSelecionada){
+    const afirmacoes = opcaoSelecionada.afirmacoes
+    historiaFinal = afirmacoes;
+    atual++;
+    mostraPergunta();
+      
 }
-
 mostraPergunta();
