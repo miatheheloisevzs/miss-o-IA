@@ -26,3 +26,35 @@ body {
 h1 {
   color: var(--cor-destaque);
 }
+
+.caixa-perguntas {
+  font-size: 1.1rem;
+  line-height: 1.6; 
+  margin-bottom: 20px;
+}
+
+.caixa-alternativas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.caixa-alternativas button {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  border: 2px solid var(--cor-destaque);
+  border-radius: 8px;
+  padding: 12px 20px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.caixa-alternativas button:hover {
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo);
+  transform: translateY(-2px);
+}
