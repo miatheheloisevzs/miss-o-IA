@@ -10,11 +10,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Quero aprender a usar antes que todo mundo.",
-                afirmacao: "afirmacao"
+                afirmacao: "Gabriel decidiu se antecipar e aprender a usar a ferramenta logo no início."
             },
             {
                 texto: "Preciso entender se isso vai colocar meu emprego em risco.",
-                afirmacao: "afirmacao"
+                afirmacao: "Gabriel ficou cauteloso e preferiu analisar os impactos da IA na sua carreira."
             }
         ]
     },
@@ -23,11 +23,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Aprende IA e tenta assumir novas responsabilidades.",
-                afirmacao: "afirmacao"
+                afirmacao: "Ele buscou se especializar na tecnologia para assumir novas responsabilidades."
             },
             {
                 texto: "Foca em habilidades que a tecnologia não consegue substituir facilmente.",
-                afirmacao: "afirmacao"
+                afirmacao: "Ele focou em aprimorar suas habilidades humanas e criativas no trabalho."
             }
         ]
     },
@@ -36,11 +36,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Aceitar e ajudar a empresa a mudar.",
-                afirmacao: "afirmacao"
+                afirmacao: "Aceitou a liderança do projeto focado na inovação e na mudança da empresa."
             },
             {
                 texto: "Aceitar, mas tentar proteger os funcionários afetados.",
-                afirmacao: "afirmacao"
+                afirmacao: "Aceitou a liderança buscando equilibrar a inovação com a proteção da sua equipe."
             }
         ]
     },
@@ -49,30 +49,19 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Manter a IA, mas exigir revisão humana.",
-                afirmacao: "afirmacao"
+                afirmacao: "Defendeu que a tecnologia deve sempre passar por supervisão humana."
             },
             {
                 texto: "Reduzir o uso da IA até que os problemas sejam resolvidos.",
-                afirmacao: "afirmacao"
-            }Resultado = document.querySelector(".texto-resultado");
-
-const perguntas = [
-    {
-        enunciado: "Gabriel conseguiu seu primeiro emprego em uma agência de publicidade. Depois de algumas semanas, a empresa anunciou uma novidade: uma IA capaz de criar textos, imagens e analisar dados em poucos segundos. O chefe disse que a ferramenta mudaria a rotina de toda a equipe. No primeiro dia, seu chefe apresenta uma nova ferramenta de IA que consegue escrever textos, analisar dados, criar imagens e automatizar tarefas que antes eram feitas pelos funcionários. Gabriel fica impressionado.",
-        alternativas: [
-            {
-                texto: "Quero aprender a usar antes que todo mundo.",
-                afirmacao: "afirmacao"
+                afirmacao: "Sugeriu desacelerar o uso da automação até garantir a precisão dos dados."
             }
-        ]
-    }
-];
         ]
     }
 ]; 
 
 let atual = 0;
 let perguntaAtual;
+let historiaFinal = "";
 
 function mostraPergunta() {
     if (atual >= perguntas.length) {
@@ -89,16 +78,21 @@ function mostraAlternativas() {
     for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativa = document.createElement("button");
         botaoAlternativa.textContent = alternativa.texto;
-        botaoAlternativa.addEventListener("click", function() 
-            atual++;
-            mostraPergunta();
+        botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativa));
+        caixaAlternativas.appendChild(botaoAlternativa);
     }
+}
 
-        }function respostaSelecionada(opcaoSelecionada){
-    const afirmacoes = opcaoSelecionada.afirmacoes
-    historiaFinal = afirmacoes;
+function respostaSelecionada(opcaoSelecionada) {
+    historiaFinal += opcaoSelecionada.afirmacao + " ";
     atual++;
     mostraPergunta();
-      
 }
+
+function exibeResultado() {
+    caixaPerguntas.textContent = "Resumo da sua jornada:";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
+}
+
 mostraPergunta();
