@@ -84,7 +84,7 @@ function mostraAlternativas() {
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-    historiaFinal += opcaoSelecionada.afirmacao + " ";
+    historiaFinal += aleatorio(opcaoSelecionada.afirmacao) + " ";
     atual++;
     mostraPergunta();
 }
@@ -95,4 +95,8 @@ function exibeResultado() {
     caixaAlternativas.textContent = "";
 }
 
+function aleatorio (lista){
+    const posicao = math.floor(math.random()* lista.length);
+    return lista[posicao];
+}
 mostraPergunta();
