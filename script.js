@@ -122,11 +122,8 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function aleatorio(lista) {
-    const posicao = Math.floor(Math.random() * lista.length); // Math com M maiúsculo
+    const posicao = Math.floor(Math.random() * lista.length); o
     return lista[posicao];
 }
-function aleatorio (lista){
-    const posicao = math.floor(math.random()* lista.length);
-    return lista[posicao];
-}
+
 mostraPergunta();
