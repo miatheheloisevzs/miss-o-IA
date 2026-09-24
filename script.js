@@ -116,17 +116,15 @@ function mostraAlternativas() {
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-    historiaFinal += aleatorio(opcaoSelecionada.afirmacao);
+    historiaFinal += aleatorio(opcaoSelecionada.afirmacao) + " "; // Adiciona espaço entre as frases
     atual++;
     mostraPergunta();
 }
 
-function exibeResultado() {
-    caixaPerguntas.textContent = "Resumo da sua jornada:";
-    textoResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent = "";
+function aleatorio(lista) {
+    const posicao = Math.floor(Math.random() * lista.length); // Math com M maiúsculo
+    return lista[posicao];
 }
-
 function aleatorio (lista){
     const posicao = math.floor(math.random()* lista.length);
     return lista[posicao];
