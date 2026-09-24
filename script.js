@@ -116,7 +116,7 @@ function mostraAlternativas() {
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-    historiaFinal += aleatorio(opcaoSelecionada.afirmacao) + " ";
+    historiaFinal += aleatorio(opcaoSelecionada.afirmacao);
     atual++;
     mostraPergunta();
 }
