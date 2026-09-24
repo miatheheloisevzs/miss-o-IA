@@ -102,7 +102,7 @@ function mostraPergunta() {
     }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.textContent = ""; // Limpa os botões anteriores
+    caixaAlternativas.textContent = "";
     mostraAlternativas();
 }
 
@@ -116,7 +116,7 @@ function mostraAlternativas() {
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-    historiaFinal += aleatorio(opcaoSelecionada.afirmacao) + " "; // Adiciona espaço entre as frases
+    historiaFinal += aleatorio(opcaoSelecionada.afirmacao) + " "; 
     atual++;
     mostraPergunta();
 }
