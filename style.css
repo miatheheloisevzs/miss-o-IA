@@ -58,3 +58,7 @@ h1 {
   color: var(--cor-fundo);
   transform: translateY(-2px);
 }
+
+.caixa-resultado{
+  display: none;
+}
