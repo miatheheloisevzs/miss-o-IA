@@ -57,7 +57,7 @@ export const perguntas = [
                 afirmacao: [
                     "Aceitou a liderança buscando equilibrar a inovação com a proteção da sua equipe.",
                     "Buscou alinhar os objetivos da empresa com uma liderança empática e responsável.",
-                    "Aceitou a promoção com o compromisso ético de minimizar impactos negativos sobre o time."
+                    "Aceitou a promoção com o compromisso ético de minimizar impactos negativos sobre o time.",
                 ]
             }
         ]
