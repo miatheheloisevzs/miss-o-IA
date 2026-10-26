@@ -8,7 +8,8 @@ export const perguntas = [
                 "Gabriel decidiu se antecipar e aprender a usar a ferramenta logo no início.",
                 "Demonstrou alto espírito de liderança e proatividade ao buscar o domínio da IA de forma pioneira.",
                 "Apostou no aprendizado rápido como diferencial competitivo para se destacar na agência.",
-            ]
+            ],
+              proxima: 1,
             },
             {
                 texto: "Preciso entender se isso vai colocar meu emprego em risco.",
@@ -16,7 +17,8 @@ export const perguntas = [
                     "Gabriel ficou cauteloso e preferiu analisar os impactos da IA na sua carreira.",
                     "Adotou uma postura analítica e previdente frente às rápidas transformações tecnológicas.",
                     "Avaliou criticamente o impacto do novo sistema na estabilidade e estrutura da sua carreira.",
-                ]
+                ],
+              proxima: 2,
             }
         ]
     },
@@ -29,7 +31,8 @@ export const perguntas = [
                     "Ele buscou se especializar na tecnologia para assumir novas responsabilidades.",
                     "Investiu em capacitação contínua para acompanhar as tendências mais avançadas do mercado.",
                     "Buscou se posicionar como ponte entre a tecnologia e as demandas estratégicas da empresa.",
-                ]
+                ],
+              proxima: 3,
             },
             {
                 texto: "Foca em habilidades que a tecnologia não consegue substituir facilmente.",
@@ -37,7 +40,8 @@ export const perguntas = [
                     "Ele focou em aprimorar suas habilidades humanas e criativas no trabalho.",
                     "Valorizou o fator humano como elemento insubstituível para o sucesso dos projetos.",
                     "Decidiu aprimorar suas competências socioemocionais para garantir relevância no mercado.",
-                ]
+                ],
+              proxima: 4,
             }
         ]
     },
@@ -50,7 +54,8 @@ export const perguntas = [
                     "Aceitou a liderança do projeto focado na inovação e na mudança da empresa.",
                     "Abraçou o desafio corporativo focado em metas de produtividade e inovação contínua.",
                     "Aceitou o cargo para impulsionar a modernização dos processos operacionais da equipe.",
-                ]
+                ],
+              proxima: 5,
             },
             {
                 texto: "Aceitar, mas tentar proteger os funcionários afetados.",
@@ -58,7 +63,8 @@ export const perguntas = [
                     "Aceitou a liderança buscando equilibrar a inovação com a proteção da sua equipe.",
                     "Buscou alinhar os objetivos da empresa com uma liderança empática e responsável.",
                     "Aceitou a promoção com o compromisso ético de minimizar impactos negativos sobre o time.",
-                ]
+                ],
+              proxima: 6,
             }
         ]
     },
@@ -71,7 +77,7 @@ export const perguntas = [
                     "Defendeu que a tecnologia deve sempre passar por supervisão humana.",
                     "Defendeu o uso da IA como apoio operacional, com validação humana obrigatória em cada etapa.",
                     "Estabeleceu um protocolo rígido de supervisão para garantir a qualidade final dos entregáveis.",
-                ]
+                ],
             },
             {
                 texto: "Reduzir o uso da IA até que os problemas sejam resolvidos.",
@@ -79,7 +85,7 @@ export const perguntas = [
                     "Sugeriu desacelerar o uso da automação até garantir a precisão dos dados.",
                     "Priorizou a segurança da informação e a reputação da marca antes de expandir a automação.",
                     "Optou por desacelerar a adoção tecnológica para auditar e corrigir as falhas identificadas.",
-                ]
+                ],
             }
         ]
     },

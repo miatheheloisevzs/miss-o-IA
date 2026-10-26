@@ -36,6 +36,12 @@ function mostraAlternativas() {
 function respostaSelecionada(opcaoSelecionada) {
     historiaFinal += aleatorio(opcaoSelecionada.afirmacao) + " "; 
     atual++;
+    if(opcaoSelecionada.proxima != undefined){
+        atual = opcaoSelecionada.proxima;
+    }else {
+        mostraResultado();
+        return;
+    }
     mostraPergunta();
 }
 
