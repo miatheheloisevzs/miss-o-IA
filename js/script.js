@@ -79,6 +79,7 @@ function mostraResultado() {
 function iniciarJogo() {
 
     telaInicial.style.display = "none";
+    caixaResultado.classList.remove("mostrar");
 
     telaJogo.style.display = "block";
 
@@ -95,9 +96,11 @@ function jogaNovamente() {
 
     caixaResultado.classList.remove("mostrar");
 
-    telaInicial.style.display = "block";
+    caixaPerguntas.textContent = "";
+    caixaAlternativas.textContent = "";
 
     telaJogo.style.display = "none";
+    telaInicial.style.display = "block";
 }
 
 function substituiNome() {
