@@ -2,13 +2,16 @@
 import { aleatorio, nome } from './aleatorio.js';
 import { perguntas } from './perguntas.js';
 
+const telaInicial = document.querySelector(".tela-inicial");
+const telaJogo = document.querySelector(".tela-jogo");
+
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
-const botaoJogarNovamente = document.querySelector(".novamente-btn");
 const botaoIniciar = document.querySelector(".iniciar-btn");
+const botaoJogarNovamente = document.querySelector(".novamente-btn");
 
 let atual = 0;
 let perguntaAtual;
@@ -30,15 +33,15 @@ function mostraPergunta() {
 
 function mostraAlternativas() {
     for (const alternativa of perguntaAtual.alternativas) {
-        const botaoAlternativas = document.createElement("button");
+        const botao = document.createElement("button");
 
-        botaoAlternativas.textContent = alternativa.texto;
+        botao.textContent = alternativa.texto;
 
-        botaoAlternativas.addEventListener("click", () => {
+        botao.addEventListener("click", () => {
             respostaSelecionada(alternativa);
         });
 
-        caixaAlternativas.appendChild(botaoAlternativas);
+        caixaAlternativas.appendChild(botao);
     }
 }
 
@@ -54,20 +57,20 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
+    telaJogo.style.display = "none";
+    caixaResultado.classList.add("mostrar");
+
     caixaPerguntas.textContent = `Em 2049, ${nome}`;
     textoResultado.textContent = historiaFinal;
-
     caixaAlternativas.textContent = "";
-    caixaResultado.classList.add("mostrar");
 }
 
 function iniciarJogo() {
-    botaoIniciar.style.display = "none";
+    telaInicial.style.display = "none";
+    telaJogo.style.display = "block";
 
     atual = 0;
     historiaFinal = "";
-
-    caixaResultado.classList.remove("mostrar");
 
     mostraPergunta();
 }
@@ -77,8 +80,8 @@ function jogaNovamente() {
     historiaFinal = "";
 
     caixaResultado.classList.remove("mostrar");
-
-    mostraPergunta();
+    telaInicial.style.display = "block";
+    telaJogo.style.display = "none";
 }
 
 function substituiNome() {
