@@ -9,6 +9,12 @@
     --cor-texto: #D7F9FF;
 }
 
+/* CONFIGURAÇÃO GERAL */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
@@ -20,7 +26,10 @@ body {
 
     min-height: 100vh;
     margin: 0;
+    padding: 20px;
 }
+
+/* CAIXA PRINCIPAL */
 
 .caixa-principal {
     background-color: var(--cor-principal);
@@ -33,18 +42,11 @@ body {
     border-radius: 12px;
 }
 
+/* TÍTULO */
+
 h1 {
     color: var(--cor-destaque);
-}
-
-h1, .caixa-perguntas, .caixa-resultado {
     font-family: "Life Savers", serif;
-}
-
-.caixa-perguntas {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
 }
 
 /* TELA INICIAL */
@@ -77,10 +79,12 @@ h1, .caixa-perguntas, .caixa-resultado {
     font-weight: bold;
 
     cursor: pointer;
-    transition: transform 0.2s;
+
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .iniciar-btn:hover {
+    background-color: #16BFD9;
     transform: scale(1.05);
 }
 
@@ -89,6 +93,17 @@ h1, .caixa-perguntas, .caixa-resultado {
 .tela-jogo {
     display: none;
 }
+
+/* PERGUNTAS */
+
+.caixa-perguntas {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--cor-texto);
+}
+
+/* ALTERNATIVAS */
 
 .caixa-alternativas {
     display: flex;
@@ -130,11 +145,14 @@ h1, .caixa-perguntas, .caixa-resultado {
     display: none;
     line-height: 1.8;
     margin-top: 20px;
+    color: var(--cor-texto);
 }
 
 .caixa-resultado.mostrar {
     display: block;
 }
+
+/* BOTÃO JOGAR NOVAMENTE */
 
 .novamente-btn {
     background-color: var(--cor-destaque);
@@ -150,8 +168,11 @@ h1, .caixa-perguntas, .caixa-resultado {
     font-weight: bold;
 
     cursor: pointer;
+
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .novamente-btn:hover {
-    opacity: 0.8;
+    background-color: #16BFD9;
+    transform: scale(1.05);
 }
