@@ -2,12 +2,13 @@
 import { aleatorio, nome } from './aleatorio.js';
 import { perguntas } from './perguntas.js';
 
-const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
+
 const botaoJogarNovamente = document.querySelector(".novamente-btn");
+const botaoIniciar = document.querySelector(".iniciar-btn");
 
 let atual = 0;
 let perguntaAtual;
@@ -60,6 +61,17 @@ function mostraResultado() {
     caixaResultado.classList.add("mostrar");
 }
 
+function iniciarJogo() {
+    botaoIniciar.style.display = "none";
+
+    atual = 0;
+    historiaFinal = "";
+
+    caixaResultado.classList.remove("mostrar");
+
+    mostraPergunta();
+}
+
 function jogaNovamente() {
     atual = 0;
     historiaFinal = "";
@@ -75,7 +87,7 @@ function substituiNome() {
     }
 }
 
+botaoIniciar.addEventListener("click", iniciarJogo);
 botaoJogarNovamente.addEventListener("click", jogaNovamente);
 
 substituiNome();
-mostraPergunta();

@@ -1,4 +1,5 @@
 
+
 const nomes = ["Leonardo", "Maithe", "Laura", "Yasmim"];
 
 export function aleatorio(lista) {

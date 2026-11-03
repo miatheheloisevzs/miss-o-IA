@@ -13,17 +13,21 @@ body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     font-family: "Life Savers", serif;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     min-height: 100vh;
     margin: 0;
 }
 
 .caixa-principal {
     background-color: var(--cor-principal);
+
     width: 90%;
     max-width: 600px;
+
     text-align: center;
     padding: 20px;
     border-radius: 12px;
@@ -53,20 +57,27 @@ h1, .caixa-perguntas, .caixa-resultado {
 .caixa-alternativas button {
     background-color: var(--cor-secundaria);
     color: var(--cor-texto);
+
     border: 2px solid var(--cor-destaque);
     border-radius: 8px;
+
     padding: 12px 20px;
+
     width: 100%;
     max-width: 400px;
+
     font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
     font-family: inherit;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .caixa-alternativas button:hover {
     background-color: var(--cor-destaque);
     color: var(--cor-fundo);
+
     transform: translateY(-2px);
 }
 
@@ -80,16 +91,43 @@ h1, .caixa-perguntas, .caixa-resultado {
     display: block;
 }
 
+.iniciar-btn {
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px 30px;
+
+    font-size: 1.1rem;
+    font-family: inherit;
+    font-weight: bold;
+
+    cursor: pointer;
+    margin-bottom: 20px;
+
+    transition: transform 0.2s;
+}
+
+.iniciar-btn:hover {
+    transform: scale(1.05);
+}
+
 .novamente-btn {
     background-color: var(--cor-destaque);
     color: var(--cor-fundo);
+
     border: none;
     border-radius: 8px;
+
     padding: 12px 20px;
+
     font-size: 1rem;
-    cursor: pointer;
     font-family: inherit;
     font-weight: bold;
+
+    cursor: pointer;
 }
 
 .novamente-btn:hover {
